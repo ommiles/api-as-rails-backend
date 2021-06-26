@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "API As Rails Backend",
+            "group": "API As Rails Backend",
+            "database": "${workspaceFolder:api-as-rails-backend}/backend/db/development.sqlite3"
+        }
+    ]
+}
