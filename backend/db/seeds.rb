@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+resp = RestClient::Request.execute(
+    method: :get,
+    url: "https://api.openbrewerydb.org/breweries",
+    headers: {
+        'Content-Type': 'application/json'
+    }
+)
+
+brewery_data = JSON.parse(resp.body)
+breweries = brewery_data
